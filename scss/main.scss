@@ -1,4 +1,11 @@
-// @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+//primary-colors
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+//neutral colors
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
 
 * {
     margin: 0;
@@ -7,16 +14,48 @@
 }
 
 body {
-    margin: 1.875rem auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Red Hat Display', sans-serif;
+    height: 100vh;
+    background-color: $pale-blue
 }
 
-.container {
+button {
+    font-family: inherit;
+}
+//can't get the background image to show
+// .bkgd-image img{
+//     // center/cover
+//     background-repeat: no-repeat;
+//     height: 400px;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: -1;
+// }
 
-    &-img .img {
-        background-image: url('images/illustration-hero.svg');
+.container {
+    // margin: 5rem auto;
+    border-radius: 10px;
+    width: 100%;
+    height: 80vh;
+    background-color: #fff;
+
+    & > img {
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+@media (min-width: 375px) {
+    .container {
+        border-radius: 10px;
+        width: 350px;
+        margin: 1rem auto;
     }
 }
