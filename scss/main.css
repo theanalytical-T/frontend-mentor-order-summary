@@ -54,7 +54,7 @@ p {
 .container {
   border-radius: 25px;
   width: 100%;
-  height: 80vh;
+  height: 62vh;
   background-color: #fff;
 }
 .container > img {
@@ -68,7 +68,6 @@ p {
 
 .desc {
   color: #7280a7;
-  line-height: 1.5;
 }
 
 article {
@@ -91,7 +90,7 @@ article > img {
 
 .container-plan {
   padding: 1.15rem;
-  margin: 20px auto;
+  margin: 25px auto;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,7 +103,7 @@ article > img {
           align-items: center;
   background-color: #f5f7ff;
   border-radius: 1.15rem;
-  padding: 10px;
+  padding: 20px;
 }
 .container-plan > button {
   border: none;
@@ -113,6 +112,49 @@ article > img {
   color: #3829e0;
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
+}
+.container-plan > button:hover {
+  opacity: 0.7;
+}
+
+.container-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+.container-buttons > .payment {
+  font-size: 1.15rem;
+  font-weight: bold;
+  padding: 1.15rem;
+  border-radius: 15px;
+  border: none;
+  background-color: #3829e0;
+  color: #fff;
+  -webkit-box-shadow: 0 20px 20px rgba(56, 41, 224, 0.2);
+          box-shadow: 0 20px 20px rgba(56, 41, 224, 0.2);
+  cursor: pointer;
+}
+.container-buttons > .payment:hover {
+  opacity: 0.7;
+}
+.container-buttons > .cancel {
+  border: none;
+  background-color: transparent;
+  font-size: 1.15rem;
+  font-weight: bold;
+  padding: 1rem;
+  color: #7280a7;
+  margin-top: 0.75rem;
+  cursor: pointer;
+}
+.container-buttons > .cancel:hover {
+  color: black;
 }
 
 @media (min-width: 375px) {
@@ -126,6 +168,23 @@ article > img {
   .bkgd-image {
     background: url("../dist/images/pattern-background-desktop.svg") no-repeat center/cover;
     height: 50vh;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 28rem;
+    height: 65vh;
+  }
+  .container > img {
+    max-width: 28rem;
+  }
+  .container-plan {
+    width: 80%;
+  }
+  .container-buttons > .payment {
+    padding: 0.75rem;
+    width: 84%;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=main.css.map */
