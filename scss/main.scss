@@ -56,7 +56,7 @@ p {
 .container {
     border-radius: 25px;
     width: 100%;
-    height: 80vh;
+    height: 62vh;
     background-color: #fff;
 
     & > img {
@@ -72,7 +72,7 @@ p {
 
 .desc {
     color: $desaturated-blue;
-    line-height: 1.5;
+    // line-height: 4px;
 }
 
 
@@ -92,14 +92,14 @@ article {
 
 .container-plan {
     padding: 1.15rem;
-    margin: 20px auto;
+    margin: 25px auto;
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $very-pale-blue;
     border-radius: 1.15rem;
-    padding: 10px;
+    padding: 20px;
 
     & > button {
         border: none;
@@ -108,6 +108,48 @@ article {
         color: $bright-blue;
         font-size: 1rem;
         font-weight: bold;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    & > .payment {
+        font-size: 1.15rem;
+        font-weight: bold;
+        padding: 1.15rem;
+        border-radius: 15px;
+        border: none;
+        background-color: $bright-blue;
+        color: #fff;
+        box-shadow: 0 20px 20px rgba($bright-blue, 0.2);
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    & > .cancel {
+        border: none;
+        background-color: transparent;
+        font-size: 1.15rem;
+        font-weight: bold;
+        padding: 1rem;
+        color: $desaturated-blue;
+        margin-top: .75rem;
+        cursor: pointer;
+
+        &:hover {
+            color: black;
+        }
     }
 }
 
@@ -129,5 +171,28 @@ article {
     .bkgd-image {
         background: url("../dist/images/pattern-background-desktop.svg") no-repeat center/cover;
         height: 50vh;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 28rem;
+        height: 65vh;
+
+        & > img {
+            max-width: 28rem;
+        }
+
+        &-plan {
+            width: 80%;
+        }
+
+        &-buttons {
+            & > .payment {
+                padding: .75rem;
+                width: 84%;
+                margin: 0 auto;
+            }
+        }
     }
 }
