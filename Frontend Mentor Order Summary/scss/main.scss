@@ -1,0 +1,198 @@
+//primary-colors
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+//neutral colors
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+    height: 100vh;
+    background-color: $pale-blue
+}
+
+button {
+    font-family: inherit;
+}
+
+
+//can't get the background image to show
+.bkgd-image{
+    background: url("../dist/images/illustration-hero.svg") no repeat center/cover;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 1.75rem;
+    padding: 1.75rem 0 1rem 0;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+
+.container {
+    border-radius: 25px;
+    width: 100%;
+    height: 62vh;
+    background-color: #fff;
+
+    & > img {
+        max-width: 100%;
+        border-radius: 25px 25px 0 0;
+    }
+
+    & > p{
+        padding: 0 1.25rem;
+        margin-bottom: 2.25rem;
+    }
+}
+
+.desc {
+    color: $desaturated-blue;
+    // line-height: 4px;
+}
+
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > .annual {
+        font-weight: bold;
+    }
+
+    & > img {
+        margin-right: 1.3rem;
+    }
+}
+
+.container-plan {
+    padding: 1.15rem;
+    margin: 25px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $very-pale-blue;
+    border-radius: 1.15rem;
+    padding: 20px;
+
+    & > button {
+        border: none;
+        background-color: transparent;
+        text-decoration: underline;
+        color: $bright-blue;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    & > .payment {
+        font-size: 1.15rem;
+        font-weight: bold;
+        padding: 1.15rem;
+        border-radius: 15px;
+        border: none;
+        background-color: $bright-blue;
+        color: #fff;
+        box-shadow: 0 20px 20px rgba($bright-blue, 0.2);
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    & > .cancel {
+        border: none;
+        background-color: transparent;
+        font-size: 1.15rem;
+        font-weight: bold;
+        padding: 1rem;
+        color: $desaturated-blue;
+        margin-top: .75rem;
+        cursor: pointer;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+
+@media (min-width: 375px) {
+    .container {
+        border-radius: 25px;
+        width: 350px;
+        margin: 1rem auto;
+    }
+
+    // .bkgd-image {
+    //     background: url("../dist/images/pattern-background-mobile.svg") no-repeat center/cover;
+    //     height: 50vh;
+    // }
+}
+
+@media (min-width: 768px) {
+    .bkgd-image {
+        background: url("../dist/images/pattern-background-desktop.svg") no-repeat center/cover;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 28rem;
+        height: 65vh;
+
+        & > img {
+            max-width: 28rem;
+        }
+
+        &-plan {
+            width: 80%;
+        }
+
+        &-buttons {
+            & > .payment {
+                padding: .75rem;
+                width: 84%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
